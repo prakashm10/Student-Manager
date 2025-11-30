@@ -1,4 +1,4 @@
-# Student Management
+# Student Manager
 
 This is a small Spring Boot (Thymeleaf) project for managing students. It contains simple authentication, CRUD for students, server-rendered UI, and tests.
 
