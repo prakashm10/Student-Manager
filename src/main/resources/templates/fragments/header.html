@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div th:fragment="header">
+    <header class="site-header py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;margin-right:8px">
+                    <i class="bi bi-mortarboard-fill" style="font-size:18px;color:white"></i>
+                </div>
+                <span>Student Manager</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                    <li class="nav-item me-2"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item me-2"><a class="nav-link" href="/add">Add</a></li>
+                    <!-- 'More' menu removed to simplify nav (was rarely used) -->
+                    <li class="nav-item d-none d-lg-block">
+                        <form th:action="@{/logout}" method="post" class="d-inline">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                            <button class="btn btn-outline-light btn-sm" type="submit">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>

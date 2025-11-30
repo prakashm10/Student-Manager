@@ -1,0 +1,83 @@
+/* Global theme for Student Management app */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+:root{
+  --primary-500: #5A66F5;
+  --primary-700: #4b54e6;
+  --accent-500: #6ee7b7;
+  --muted: #6c757d;
+  --bg-gradient-1: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+  --card-shadow: 0 8px 30px rgba(16,24,40,0.12);
+  --glass: rgba(255,255,255,0.06);
+}
+
+/* Basic layout */
+html,body{height:100%;}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#212529;
+  background: linear-gradient(180deg,#f6f9ff 0%, #eef2ff 100%);
+}
+
+/* Accessibility: visible focus styles for keyboard users */
+*:focus{outline: none}
+*:focus-visible{
+  outline: 3px solid rgba(90,102,245,0.32);
+  outline-offset: 3px;
+  border-radius:6px;
+}
+
+/* Contrast helpers for badges */
+.badge-gpa{color:#fff!important}
+.badge.bg-info{color:#0b1226!important}
+
+.app-shell{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+.main-content{flex:1;padding:40px 20px;}
+
+.site-header{background:var(--bg-gradient-1);}
+.site-header .navbar-brand{font-weight:700;letter-spacing:0.3px}
+
+.container-card{background:white;border-radius:14px;box-shadow:var(--card-shadow);overflow:hidden}
+.card-header-hero{padding:32px 30px;border-bottom:1px solid rgba(0,0,0,0.04);background:linear-gradient(90deg, rgba(90,102,245,0.06), rgba(118,75,162,0.03));}
+.card-body-large{padding:30px}
+
+/* Stats */
+.stats-card-min{border-radius:10px;padding:16px;color:#fff}
+.stats-title{font-size:0.9rem;color: rgba(255,255,255,0.85)}
+.stats-value{font-size:1.6rem;font-weight:700}
+
+/* Table */
+.table-card{border-radius:10px;overflow:hidden}
+.table thead{background:linear-gradient(90deg,var(--primary-500),var(--primary-700));color:white}
+.table tbody tr:hover{background:rgba(17,24,39,0.02)}
+
+/* Buttons */
+.btn-primary-grad{background: linear-gradient(90deg,var(--primary-500),var(--primary-700)); border:none;color:white}
+.btn-outline-muted{border:1px solid rgba(33,37,41,0.08); background:white}
+
+/* Form improvements */
+.form-card{border-radius:14px;box-shadow:var(--card-shadow);border:none;background:white}
+.form-label{font-weight:600;color:var(--muted);}
+
+/* Profile */
+.avatar-circle{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--primary-500);color:white;font-weight:700}
+
+/* Footer */
+.site-footer{padding:20px 0;background:#0f172a;color:rgba(255,255,255,0.8);}
+.site-footer .brand{font-weight:700}
+
+/* Extra helpers */
+.container-card .card-inner{padding:22px}
+.btn-round{border-radius:999px}
+.muted-small{font-size:0.85rem;color:var(--muted)}
+.alert-soft{background:rgba(16,24,40,0.03);border:1px solid rgba(16,24,40,0.04);border-radius:10px;padding:10px}
+
+/* Responsive tweaks */
+@media (max-width:767px){
+  .main-content{padding:20px 10px}
+  .card-header-hero{padding:20px}
+}
